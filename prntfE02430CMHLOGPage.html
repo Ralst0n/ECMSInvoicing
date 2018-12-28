@@ -1,0 +1,1433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="IBM Software Development Platform" name="GENERATOR"/>
+<meta content="ECMS, PA Department of Transportation, Registration, Doing Business" name="keywords"/>
+<meta content=" Engineering &amp; Construction Management System" name="description"/>
+<link href="css/body.css" rel="stylesheet" type="text/css"/>
+<link href="css/calendar.css" rel="stylesheet" type="text/css"/>
+<link href="css/banner.css" rel="stylesheet" type="text/css"/>
+<link href="css/toolbar.css" rel="stylesheet" type="text/css"/>
+<!-- Here based on the browser, respective css file is loaded. -->
+<!--[if lte IE 9]>
+	<LINK rel="stylesheet" type="text/css" href="css/menu.css">
+<![endif]-->
+<!--[if !IE]> -->
+<link href="css/menu_non_ie.css" rel="stylesheet" type="text/css"/>
+<!-- <![endif]-->
+<script language="JavaScript" src="javascript/common.js"></script>
+<script language="JavaScript" src="javascript/buttonhandler.js"></script>
+<script language="JavaScript" src="javascript/CascadeMenu.js"></script>
+<!--[if lte IE 9]>
+	<script language=JavaScript src="javascript/ECMSCommon.js"></script>
+<![endif]-->
+<!--[if !IE]> -->
+<script language="JavaScript" src="javascript/ECMSCommon_non_ie.js"></script>
+<!-- <![endif]-->
+<script language="JavaScript" src="javascript/validation.js"></script>
+<script language="JavaScript" src="javascript/toolbar.js"></script>
+<title>Inspector Log - Mileage and Hours</title>
+</head>
+<body class="Page" id="Bdy" onresize="bodyOnResize();" style="overflow: hidden;">
+<div id="timeoutWarning" onkeypress="checkCloseTimeoutWarning(event);">
+<div>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="Section1Title"><tbody><tr class="Section1Title"><td class="Section1Title">Timeout Warning</td></tr></tbody></table>
+<table class="Section1Body"><tbody><tr class="Section1Body"><td class="Section1Body">
+             
+           <img align="left" border="0" height="35px" src="images/i_warning.gif" width="35px"/>
+<b>  
+				<p style="font-size: 11pt;">	
+				Wed Dec 26 14:47:13 EST 2018
+					 </p>
+</b>
+<p style="font-size: 11pt;"> Your session will timeout in <b><span id="timeoutCnt2">29</span></b> minute(s).  Would you like to stay logged in to the application?</p>
+<p style="font-size: 11pt;"> Select YES within <b><span id="timeoutCnt3">29</span></b> minute(s) to avoid being logged out and transferred to ECMS Home Page.</p>
+<p> </p>
+<p> </p>
+<p style="text-align: center; font-size: 13pt;">
+<button class="PDButton" lang="javascript" name="timeoutContinue" onclick="return checkSelectionConfirmation('true', &quot;&quot;, '') &amp;&amp; doPDButton('script', 'hideTimeoutWarning(true)', &quot;&quot;);" onmouseout="this.className='PDButton'" onmouseover="this.className='PDButton PDButtonHover'" title="">Yes</button>     
+                    <button class="PDButton" lang="javascript" name="timeoutClose" onclick="return checkSelectionConfirmation('true', &quot;&quot;, '') &amp;&amp; doPDButton('script', 'hideTimeoutWarning(false)', &quot;&quot;);" onmouseout="this.className='PDButton'" onmouseover="this.className='PDButton PDButtonHover'" title="">No</button>
+</p>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</div>
+</div>
+<table class="banner">
+<tbody><tr class="banner">
+<td class="penndot">
+<div class="penndotLink"><a class="banner" href="http://www.penndot.gov" target="_blank"><img alt="PennDOT" class="banner" src="images/penndotLogo.jpg"/></a></div>
+</td>
+<td class="ecms">
+			 
+		    <div class="banner">ECMS</div>
+<div class="banner shadow">ECMS</div>
+<div class="bannertext bannertext1">Engineering and Construction</div>
+<div class="bannertext bannertext2">Management System</div>
+<div class="bannerenvironmenttext"></div>
+<div class="home"><a class="banner" href="" title="ECMS Home">home</a></div>
+<div class="sitemap"><a class="banner" href="SVCOMSiteMap" title="ECMS Site Map">site map</a></div>
+<div class="help"><a class="banner" href="javascript:openHelpWindow()" title="ECMS Help">help</a></div>
+</td>
+<td class="pa">
+	    	 
+			
+		    <div class="paLink"><a class="banner" href="http://www.pa.gov" target="_blank"><img alt="PA" class="banner" src="images/paLogo.gif"/></a></div>
+<div class="logout"><a class="banner logout" href="SVCOMLogin?action=logout" title="Logout">logout</a></div>
+<a class="username" href="/ECMS/">
+</a><div class="userName" id="toggle_userGroups" onclick="javascript:toggle('div_userGroups', 'null',  'null',  'null')" onmouseout="this.className='userName'" onmouseover="this.className='userName PDTwistieToggleHover'"><a class="username" href="/ECMS/"></a><a class="userName" href="" onclick="return false;">
+						Ralston W. Lawson
+					</a></div>
+<div class="userGroups" id="div_userGroups" style="display:none">
+						
+							$BMSBP CONSULTANT INSPECTOR 000090<br/>$BMSBP CONSULTANT INSPECTOR<br/>$BMSBP CONSULTANT INSPECTOR SUPERVISOR 000090<br/>$BMSBP CONSULTANT INSPECTOR SUPERVISOR<br/>$ECMSBP CMH LOG APPROVER 000090<br/>$ECMSBP CMH LOG APPROVER<br/>$ECMSBP CONSULTANT CONSTRUCTION MANAGEMENT 000090<br/>$ECMSBP CONSULTANT CONSTRUCTION MANAGEMENT<br/>$ECMSBP CONSULTANT INSPECTOR 000090<br/>$ECMSBP CONSULTANT INSPECTOR<br/>$ECMSBP DATA ENTRY 000090<br/>$ECMSBP DATA ENTRY<br/>$ECMSBP FINANCIAL OFFICER 000090<br/>$ECMSBP FINANCIAL OFFICER<br/>$ECMSBP PROJECT MANAGER 000090<br/>$ECMSBP PROJECT MANAGER<br/>
+</div>
+</td>
+</tr>
+</tbody></table>
+<iframe class="menu" id="menu100_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu100" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=363" id="menuItem100_30" title="My Business Partner Information" type="Window">
+<a class="menuItem" href="" id="menuItem100_30_Link" onclick="return false;">My Info</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=5" id="menuItem100_40" title="Search for a Business Partner" type="Window">
+<a class="menuItem" href="" id="menuItem100_40_Link" onclick="return false;">Search</a>
+</div>
+</div><iframe class="menu" id="menu101_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu101" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=523" id="menuItem101_10" title="View Bonding Agencies" type="Href">
+<a class="menuItem" href="" id="menuItem101_10_Link" onclick="return false;">Bonding Agencies</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=511" id="menuItem101_30" title="View Bonds" type="Href">
+<a class="menuItem" href="" id="menuItem101_30_Link" onclick="return false;">Bonds</a>
+</div>
+</div><iframe class="menu" id="menu102_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu102" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=508" id="menuItem102_20" title="View Bonds" type="Href">
+<a class="menuItem" href="" id="menuItem102_20_Link" onclick="return false;">Bonds</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=524" id="menuItem102_30" title="View Sureties" type="Href">
+<a class="menuItem" href="" id="menuItem102_30_Link" onclick="return false;">Sureties</a>
+</div>
+</div><iframe class="menu" id="menu1_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu1">
+<div class="menuItem" id="menuItem1_10" menu="menu100">
+<a class="menuItem" href="" id="menuItem1_10_Link" onclick="return false;">Business Partner</a>
+<span class="Arrow" id="menuItem1_10_Arrow">&gt;</span> </div>
+<div class="menuItem" id="menuItem1_20" menu="menu101">
+<a class="menuItem" href="" id="menuItem1_20_Link" onclick="return false;">Bonding Agencies</a>
+<span class="Arrow" id="menuItem1_20_Arrow">&gt;</span> </div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=6" id="menuItem1_30" title="View Consultants Portal" type="Href">
+<a class="menuItem" href="" id="menuItem1_30_Link" onclick="return false;">Consultants</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=362" id="menuItem1_40" title="View Contractors Portal" type="Href">
+<a class="menuItem" href="" id="menuItem1_40_Link" onclick="return false;">Contractors</a>
+</div>
+<div class="menuItem" id="menuItem1_50" menu="menu102">
+<a class="menuItem" href="" id="menuItem1_50_Link" onclick="return false;">Sureties</a>
+<span class="Arrow" id="menuItem1_50_Arrow">&gt;</span> </div>
+</div><iframe class="menu" id="menu103_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu103" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=322" id="menuItem103_10" title="View Planned Projects Portal" type="Href">
+<a class="menuItem" href="" id="menuItem103_10_Link" onclick="return false;">Planned Projects</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=14" id="menuItem103_20" title="View Advertisements Portal" type="Href">
+<a class="menuItem" href="" id="menuItem103_20_Link" onclick="return false;">Advertisements</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=15" id="menuItem103_30" title="View Selection Results Portal" type="Href">
+<a class="menuItem" href="" id="menuItem103_30_Link" onclick="return false;">Selection Results</a>
+</div>
+</div><iframe class="menu" id="menu104_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu104" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=505" id="menuItem104_10" title="View Bid Packages Portal" type="Href">
+<a class="menuItem" href="" id="menuItem104_10_Link" onclick="return false;">Bid Packages</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=506" id="menuItem104_20" title="View Bid Results Portal" type="Href">
+<a class="menuItem" href="" id="menuItem104_20_Link" onclick="return false;">Bid Results</a>
+</div>
+</div><iframe class="menu" id="menu2_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu2">
+<div class="menuItem" id="menuItem2_10" menu="menu103">
+<a class="menuItem" href="" id="menuItem2_10_Link" onclick="return false;">Consultants</a>
+<span class="Arrow" id="menuItem2_10_Arrow">&gt;</span> </div>
+<div class="menuItem" id="menuItem2_20" menu="menu104">
+<a class="menuItem" href="" id="menuItem2_20_Link" onclick="return false;">Contractors</a>
+<span class="Arrow" id="menuItem2_20_Arrow">&gt;</span> </div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=19" id="menuItem2_30" title="View Forum Portal" type="Href">
+<a class="menuItem" href="" id="menuItem2_30_Link" onclick="return false;">Forum</a>
+</div>
+</div><iframe class="menu" id="menu3_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu3">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=21" id="menuItem3_10" title="View Agreements Portal" type="Href">
+<a class="menuItem" href="" id="menuItem3_10_Link" onclick="return false;">Agreements</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=41" id="menuItem3_20" title="View Invoices Portal" type="Href">
+<a class="menuItem" href="" id="menuItem3_20_Link" onclick="return false;">Invoices</a>
+</div>
+</div><iframe class="menu" id="menu105_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu105" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=512" id="menuItem105_10" title="View Asphalt/Diesel Prices" type="Href">
+<a class="menuItem" href="" id="menuItem105_10_Link" onclick="return false;">Asphalt-Diesel Prices</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=513" id="menuItem105_20" title="View Item Price History Portal" type="Href">
+<a class="menuItem" href="" id="menuItem105_20_Link" onclick="return false;">Item Price History</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=504" id="menuItem105_30" title="View Master Items Portal" type="Href">
+<a class="menuItem" href="" id="menuItem105_30_Link" onclick="return false;">Master Items</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=481" id="menuItem105_40" title="View Special Provision Portal" type="Href">
+<a class="menuItem" href="" id="menuItem105_40_Link" onclick="return false;">Special Provisions</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=561" id="menuItem105_50" title="View Steel Prices" type="Href">
+<a class="menuItem" href="" id="menuItem105_50_Link" onclick="return false;">Steel Prices</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=541" id="menuItem105_60" title="Work Class Codes" type="Href">
+<a class="menuItem" href="" id="menuItem105_60_Link" onclick="return false;">Work Class Codes</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=201" id="menuItem105_70" title="Import Equipments" type="Href">
+<a class="menuItem" href="" id="menuItem105_70_Link" onclick="return false;">Equipment Inventory</a>
+</div>
+</div><iframe class="menu" id="menu4_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu4">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=461" id="menuItem4_10" title="View Projects Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_10_Link" onclick="return false;">Projects</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=502" id="menuItem4_20" title="View Estimates Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_20_Link" onclick="return false;">Estimates</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=503" id="menuItem4_30" title="View Work Orders Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_30_Link" onclick="return false;">Work Orders</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=801" id="menuItem4_40" title="View Project Site Activites Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_40_Link" onclick="return false;">Site Activities</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=181" id="menuItem4_50" title="View Source of Supply Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_50_Link" onclick="return false;">Source of Supply</a>
+</div>
+<div class="menuItem" id="menuItem4_100" menu="menu105">
+<a class="menuItem" href="" id="menuItem4_100_Link" onclick="return false;">Resources</a>
+<span class="Arrow" id="menuItem4_100_Arrow">&gt;</span> </div>
+</div><iframe class="menu" id="menu106_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu106" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=32" id="menuItem106_10" title="AASHTO" type="Window">
+<a class="menuItem" href="" id="menuItem106_10_Link" onclick="return false;">AASHTO</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=141" id="menuItem106_11" title="PROJECT COLLABORATION CENTER (PPCC)" type="Window">
+<a class="menuItem" href="" id="menuItem106_11_Link" onclick="return false;">PROJECT COLLABORATION CENTER (PPCC)</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=34" id="menuItem106_20" title="Highway Engineering Exchange Program (HEEP)" type="Window">
+<a class="menuItem" href="" id="menuItem106_20_Link" onclick="return false;">Highway Engineering Exchange Program (HEEP)</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=35" id="menuItem106_30" title="Other DOTs" type="Window">
+<a class="menuItem" href="" id="menuItem106_30_Link" onclick="return false;">Other DOTs</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=441" id="menuItem106_40" title="PA Unified Certification Program" type="Window">
+<a class="menuItem" href="" id="menuItem106_40_Link" onclick="return false;">PA Unified Certification Program (UCP)</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=563" id="menuItem106_50" title="View PennDOT DBE Map" type="Window">
+<a class="menuItem" href="" id="menuItem106_50_Link" onclick="return false;">PennDOT DBE Map</a>
+</div>
+</div><iframe class="menu" id="menu107_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu107" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=581" id="menuItem107_10" title="Construction Forms" type="Window">
+<a class="menuItem" href="" id="menuItem107_10_Link" onclick="return false;">Construction Forms</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=4" id="menuItem107_15" title="Partial list of Construction Related E - Pubs" type="Window">
+<a class="menuItem" href="" id="menuItem107_15_Link" onclick="return false;">Construction Related E - Pubs</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=582" id="menuItem107_20" title="Highway Related" type="Window">
+<a class="menuItem" href="" id="menuItem107_20_Link" onclick="return false;">Highway Related</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=81" id="menuItem107_30" title="Forms &amp; Publications" type="Window">
+<a class="menuItem" href="" id="menuItem107_30_Link" onclick="return false;">Forms &amp; Publications</a>
+</div>
+</div><iframe class="menu" id="menu5_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu5">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=721" id="menuItem5_5" title="Bulletins" type="Href">
+<a class="menuItem" href="" id="menuItem5_5_Link" onclick="return false;">Bulletins</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=161" id="menuItem5_15" title="CMH Log Q &amp;A" type="Href">
+<a class="menuItem" href="" id="menuItem5_15_Link" onclick="return false;">CMH Log Q &amp;A</a>
+</div>
+<div class="menuItem" id="menuItem5_30" menu="menu106">
+<a class="menuItem" href="" id="menuItem5_30_Link" onclick="return false;">External Links</a>
+<span class="Arrow" id="menuItem5_30_Arrow">&gt;</span> </div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=268" id="menuItem5_40" title="View File Cabinet" type="Href">
+<a class="menuItem" href="" id="menuItem5_40_Link" onclick="return false;">File Cabinet</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=52" id="menuItem5_50" title="PennDOT Systems" type="Window">
+<a class="menuItem" href="" id="menuItem5_50_Link" onclick="return false;">PennDOT Systems</a>
+</div>
+<div class="menuItem" id="menuItem5_60" menu="menu107">
+<a class="menuItem" href="" id="menuItem5_60_Link" onclick="return false;">Publications</a>
+<span class="Arrow" id="menuItem5_60_Arrow">&gt;</span> </div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=121" id="menuItem5_65" title="Reimbursement Agreement System" type="Window">
+<a class="menuItem" href="" id="menuItem5_65_Link" onclick="return false;">Reimbursement Agreements</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=621" id="menuItem5_80" title="Strike-off Letters" type="Href">
+<a class="menuItem" href="" id="menuItem5_80_Link" onclick="return false;">Strike-off Letters</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=661" id="menuItem5_90" title="Training Calendar" type="Window">
+<a class="menuItem" href="" id="menuItem5_90_Link" onclick="return false;">Training Calendar</a>
+</div>
+</div><iframe class="menu" id="menu6_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu6">
+</div><div class="menuSize" id="menuSize">
+<div class="menuBar" id="menuBar">
+<div class="Bar" id="Bar1" menu="menu1">
+<a class="Bar" href="" id="Bar1_Link" onclick="return false;">Business Partner</a>
+</div>
+<div class="Bar" id="Bar2" menu="menu2">
+<a class="Bar" href="" id="Bar2_Link" onclick="return false;">Solicitation</a>
+</div>
+<div class="Bar" id="Bar3" menu="menu3">
+<a class="Bar" href="" id="Bar3_Link" onclick="return false;">Engineering Agreements</a>
+</div>
+<div class="Bar" id="Bar4" menu="menu4">
+<a class="Bar" href="" id="Bar4_Link" onclick="return false;">Construction Projects</a>
+</div>
+<div class="Bar" id="Bar5" menu="menu5">
+<a class="Bar" href="" id="Bar5_Link" onclick="return false;">References</a>
+</div>
+<div class="Bar" cmd="SVCOMMain?action=showMenuItem&amp;menuId=341" id="Bar6" menu="menu6" title="Work Queue" type="Href">
+<a class="Bar" href="" id="Bar6_Link" onclick="return false;"><img align="absmiddle" height="16" src="images/i_work_queue.gif"/> Work Queue</a>
+</div>
+</div>
+</div>
+<iframe class="button" id="button1_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="button" id="button1" style="visibility: hidden;">
+<div class="buttonItem" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=2","")' id="buttonItem1_2" onbefore='checkSelectionConfirmation("","","")' title="Return to Inspector Log Details">
+<a class="buttonItem" href="" id="buttonItem1_2_Link" onclick="return false;">Inspector Log Details</a>
+</div>
+<div class="buttonItem" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=3","")' id="buttonItem1_3" onbefore='checkSelectionConfirmation("","","")' title="Return to Inspector Log Details">
+<a class="buttonItem" href="" id="buttonItem1_3_Link" onclick="return false;">Inspector Log Details</a>
+</div>
+<div class="buttonItem" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=4","")' id="buttonItem1_4" onbefore='checkSelectionConfirmation("","","")' title="Return to Inspector Log Details">
+<a class="buttonItem" href="" id="buttonItem1_4_Link" onclick="return false;">Inspector Log Details</a>
+</div>
+<div class="buttonItem" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=5","")' id="buttonItem1_5" onbefore='checkSelectionConfirmation("","","")' title="Return to Inspector Log Details">
+<a class="buttonItem" href="" id="buttonItem1_5_Link" onclick="return false;">Inspector Log Details</a>
+</div>
+<div class="buttonItem" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=6","")' id="buttonItem1_6" onbefore='checkSelectionConfirmation("","","")' title="Return to Inspector Log Details">
+<a class="buttonItem" href="" id="buttonItem1_6_Link" onclick="return false;">Inspector Log Details</a>
+</div>
+<div class="buttonItem" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=7","")' id="buttonItem1_7" onbefore='checkSelectionConfirmation("","","")' title="Return to Mileage and Hours Log Search Results">
+<a class="buttonItem" href="" id="buttonItem1_7_Link" onclick="return false;">Mileage and Hours Log Search Results</a>
+</div>
+<div class="buttonItem" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=8","")' id="buttonItem1_8" onbefore='checkSelectionConfirmation("","","")' title="Return to Mileage and Hours Log Portal">
+<a class="buttonItem" href="" id="buttonItem1_8_Link" onclick="return false;">Mileage and Hours Log Portal</a>
+</div>
+</div><iframe class="button" id="button3_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="button" id="button3" style="visibility: hidden;">
+<div class="buttonItem" cmd="javascript:doPDButton(&quot;script&quot;,&quot;openScreenHelpWindow('WEB-INF/jsp/MHLmanageInspectorLog.jsp')&quot;,&quot;&quot;)" id="buttonItem3_1" onbefore='checkSelectionConfirmation("","","")' title="View Screen Help">
+<a class="buttonItem" href="" id="buttonItem3_1_Link" onclick="return false;">Screen Help</a>
+</div>
+<div class="buttonItem" cmd="javascript:doPDButton(&quot;script&quot;,&quot;openUserDictionaryWindow('WEB-INF/jsp/MHLmanageInspectorLog.jsp')&quot;,&quot;&quot;)" id="buttonItem3_2" onbefore='checkSelectionConfirmation("","","")' title="View Application Permissions">
+<a class="buttonItem" href="" id="buttonItem3_2_Link" onclick="return false;">Application Permissions</a>
+</div>
+</div>
+<div class="toolbarBar" id="toolbarBar">
+<div class="toolbarButton" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=2","")' dropdownid="Toolbar_Arrow_1" id="buttonBar1" menu="button1" onbefore='checkSelectionConfirmation("","","")' title="Back">
+<a class="toolbarButton" href="" id="buttonBar1_Link" onclick="return false;"><img align="left" border="0" src="images/i_back.gif"/>Back <span class="toolbarArrow" id="Toolbar_Arrow_1"><img class="toolbarArrowImage" height="12" src="images/i_arrow_down.png" width="12"/></span>   </a>
+</div>
+<div class="toolbarButton" cmd="javascript:doPDButton(&quot;script&quot;,&quot;openPrinterFriendlyWindow('WEB-INF/jsp/MHLmanageInspectorLog.jsp')&quot;,&quot;&quot;)" id="buttonBar2" onbefore='checkSelectionConfirmation("","","")' title="Printer Friendly Version">
+<a class="toolbarButton" href="" id="buttonBar2_Link" onclick="return false;"><img align="left" border="0" src="images/i_printer.gif"/></a>
+</div>
+<div class="toolbarButton" dropdownid="Toolbar_Arrow_3" id="buttonBar3" menu="button3" onbefore='checkSelectionConfirmation("","","")' title="Help">
+<a class="toolbarButton" href="" id="buttonBar3_Link" onclick="return false;"><img align="left" border="0" src="images/i_help.gif"/>Help<span class="toolbarArrow" id="Toolbar_Arrow_3"><img class="toolbarArrowImage" height="12" src="images/i_arrow_down.png" width="12"/></span>   </a>
+</div>
+</div>
+<script> InitToolbar(); </script>
+<!-- Include file for displaying current ECMSMessages -->
+<div class="Page" id="dataView" onclick="dataViewOnClick();" style="height: 781px;">
+<!--[if lte IE 9]>
+	<script language=JavaScript src="javascript/calendarControl.js"></script>
+<![endif]-->
+<!--[if !IE]> -->
+<script language="JavaScript" src="javascript/calendarControl_non_ie.js"></script><div id="CalendarControl"></div>
+<!-- <![endif]-->
+<table class="Page"><tbody><tr class="Page"><td class="Page">
+<form action="SVMHLLog" method="post" name="pdform">
+<input name="action" type="hidden"/>
+<table class="Title"><tbody><tr class="Title"><td class="Title">Mileage and Hours - Inspector Log Screen</td></tr></tbody></table>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="Section1Title"><tbody><tr class="Section1Title"><td class="Section1Title">
+<a class="PDTwistieToggle" href="" onclick="javascript:toggle('div_detailTwistieAssignment', 'image_detailTwistieAssignment', 'images/i_opened.gif', 'images/i_closed.gif'); return false;"><img alt="Expand/Collapse" border="0" class="PDTwistieToggle" id="image_detailTwistieAssignment" onmouseout="this.className='PDTwistieToggle'" onmouseover="this.className='PDTwistieToggle PDTwistieToggleHover'" src="images/i_opened.gif"/></a> Assignment
+			</td></tr></tbody></table>
+<div class="PDTwistieBody" id="div_detailTwistieAssignment" style="display:block">
+<table class="header1body">
+<colgroup>
+<col width="17%"/>
+<col width="17%"/>
+<col width="16%"/>
+<col width="16%"/>
+<col width="17%"/>
+<col width="17%"/>
+</colgroup>
+<tbody><tr class="header1body">
+<td class="header1body label top" nowrap="">
+					Agreement No:
+				</td>
+<td class="header1body data" nowrap="">
+					E02430
+				</td>
+<td class="header1body label top" nowrap="">
+					Part/WO:
+				</td>
+<td class="header1body data" nowrap="">
+					1
+				</td>
+<td class="header1body label top" nowrap="">
+					Inspector Name:
+				</td>
+<td class="header1body data" nowrap="">
+					John M Vartabedian
+				</td>
+</tr>
+<tr class="header1body">
+<td class="header1body label top" nowrap="">
+					ECMS Project No:
+				</td>
+<td class="header1body data" nowrap="">
+					64222
+				</td>
+<td class="header1body label top" nowrap="">
+					Reporting Location:
+				</td>
+<td class="header1body data" colspan="3" nowrap="">
+					SR 422 M1A (Pottstown)
+				</td>
+</tr>
+</tbody></table>
+</div>
+</td></tr></tbody></table>
+<input name="ASSIGNMENT_ID" type="hidden" value="673"/>
+<input name="INSPECTOR_ID" type="hidden" value="1426"/>
+<input name="INSPECTOR_LOG_ID" type="hidden" value="72875"/>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="Section1Title"><tbody><tr class="Section1Title"><td class="Section1Title">Inspector Log</td></tr></tbody></table>
+<input name="INSPECTOR_LOG_ID" type="hidden" value="72875"/>
+<table class="body">
+<colgroup>
+<col width="17%"/>
+<col width="49%"/>
+<col width="17%"/>
+<col width="17%"/>
+</colgroup>
+<tbody><tr class="header1body">
+<td class="header1body label top" nowrap="">Start Date: </td>
+<td class="header1body data" nowrap="">
+						10/29/2018<input name="LOG_FROM_DATE" type="hidden" value="10/29/2018"/>
+</td>
+<td class="header1body label top" nowrap="">End Date: </td>
+<td class="header1body data" nowrap="">
+						
+							
+							
+								11/04/2018<input name="LOG_TO_DATE" type="hidden" value="11/04/2018"/>
+</td>
+</tr>
+<tr>
+<td class="header1body label top" nowrap="">Log Type: </td>
+<td class="header1body data" nowrap="">
+<label class="PDLabel">Regular</label><input name="LOG_TYPE" type="hidden" value="01"/>
+</td>
+<td class="header1body label top" nowrap="">Status:</td>
+<td class="status" nowrap=""> Approved</td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="Section1Title"><tbody><tr class="Section1Title"><td class="Section1Title">
+<a class="PDTwistieToggle" href="" onclick="javascript:toggle('div_detailTwistieMHLInspLogDetails', 'image_detailTwistieMHLInspLogDetails', 'images/i_opened.gif', 'images/i_closed.gif'); return false;"><img alt="Expand/Collapse" border="0" class="PDTwistieToggle" id="image_detailTwistieMHLInspLogDetails" onmouseout="this.className='PDTwistieToggle'" onmouseover="this.className='PDTwistieToggle PDTwistieToggleHover'" src="images/i_opened.gif"/></a> Summary
+			</td></tr></tbody></table>
+<div class="PDTwistieBody" id="div_detailTwistieMHLInspLogDetails" style="display:block">
+<table class="results">
+<colgroup>
+<col width="17%"/>
+<col width="6%"/>
+<col width="27%"/>
+<col width="6%"/>
+<col width="44%"/>
+</colgroup>
+<tbody><tr class="data">
+<td colspan="5"> </td>
+</tr>
+<tr class="data">
+<td colspan="5"> </td>
+</tr>
+<tr class="data">
+<td class="label" nowrap="">Total Regular Hours: </td>
+<td class="data right">
+							40.00
+						</td>
+<td class="label" nowrap="">Total Commute Miles: </td>
+<td class="data right">
+							0.00
+						</td>
+<td> </td>
+</tr>
+<tr class="data">
+<td class="label" nowrap="">Total Overtime Hours: </td>
+<td class="data right">
+							0.00
+						</td>
+<td class="label" nowrap="">Total OJM Miles: </td>
+<td class="data right">
+							101.00
+						</td>
+<td> </td>
+</tr>
+<tr class="data">
+<td> </td>
+<td> </td>
+<td class="label" nowrap="">Total Billable Miles: </td>
+<td class="data right">
+							101.00
+						</td>
+<td> </td>
+</tr>
+<tr class="data">
+<td colspan="5"> </td>
+</tr>
+<tr class="data">
+<td colspan="5">
+<hr/>
+</td>
+</tr>
+<tr>
+<td colspan="5"> </td>
+</tr>
+<tr>
+<td class="label" nowrap="">Comment:</td>
+<td class="left" colspan="4">
+<table class="PDTextarea"><tbody><tr class="PDTextarea"><td class="PDTextarea"></td></tr></tbody></table> <input name="COMMENT" type="hidden" value=""/>
+</td>
+</tr>
+<tr>
+<td colspan="5"> </td>
+</tr>
+</tbody></table>
+</div>
+</td></tr></tbody></table>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="section1Title">
+<colgroup>
+<col width="95%"/>
+<col width="5%"/>
+</colgroup>
+<tbody><tr class="Section1Title">
+<td class="Section1Title">
+<a class="PDTwistieToggle" href="" onclick="javascript:toggle('div_detailTwistieMHLInspLogHrs', 'image_detailTwistieMHLInspLogHrs', 'images/i_opened.gif', 'images/i_closed.gif'); return false;"><img alt="Expand/Collapse" border="0" class="PDTwistieToggle" id="image_detailTwistieMHLInspLogHrs" onmouseout="this.className='PDTwistieToggle'" onmouseover="this.className='PDTwistieToggle PDTwistieToggleHover'" src="images/i_opened.gif"/></a> Hours
+							</td>
+<td class="Section1Title right">
+</td>
+</tr>
+</tbody></table>
+<div class="PDTwistieBody" id="div_detailTwistieMHLInspLogHrs" style="display:block">
+<table class="body">
+<colgroup>
+<col width="1%"/>
+<col width="5%"/>
+<col width="15%"/>
+<col width="5%"/>
+<col width="5%"/>
+<col width="6%"/>
+<col width="6%"/>
+<col width="3%"/>
+<col width="54%"/>
+</colgroup>
+<tbody><tr class="">
+<th class="results left" nowrap=""></th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGHRSLIST&amp;colName=LOG_DATE&amp;action=sortListHeader" title="Sort ascending">Date</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGHRSLIST&amp;colName=JOB_CLASS_CODE&amp;action=sortListHeader" title="Sort ascending">Classification</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGHRSLIST&amp;colName=START_TIME&amp;action=sortListHeader" title="Sort ascending">Begin Work</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGHRSLIST&amp;colName=END_TIME&amp;action=sortListHeader" title="Sort ascending">End Work</a>
+</th>
+<th class="results right" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGHRSLIST&amp;colName=STRAIGHT_HOURS&amp;action=sortListHeader" title="Sort ascending">Regular Hours</a>
+</th>
+<th class="results right" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGHRSLIST&amp;colName=OVERTIME_HOURS&amp;action=sortListHeader" title="Sort ascending">Overtime Hours</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGHRSLIST&amp;colName=INV_IND&amp;action=sortListHeader" title="Sort ascending">Invoiced</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGHRSLIST&amp;colName=COMMENT&amp;action=sortListHeader" title="Sort ascending">Comments</a>
+</th>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											10/29/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											07:00 PM
+										</td>
+<td class="results left">
+											11:00 PM
+										</td>
+<td class="results right">
+											4.00
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor/Night Shift
+										</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											10/29/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											11:30 PM
+										</td>
+<td class="results left">
+											03:00 AM
+										</td>
+<td class="results right">
+											3.50
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor/Night Shift
+										</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											10/30/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											07:00 PM
+										</td>
+<td class="results left">
+											11:00 PM
+										</td>
+<td class="results right">
+											4.00
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor/Night Shift
+										</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											10/30/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											11:30 PM
+										</td>
+<td class="results left">
+											05:00 AM
+										</td>
+<td class="results right">
+											5.50
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor/Night Shift
+										</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/01/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											06:30 AM
+										</td>
+<td class="results left">
+											12:00 PM
+										</td>
+<td class="results right">
+											5.50
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor
+										</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/01/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											12:30 PM
+										</td>
+<td class="results left">
+											05:00 PM
+										</td>
+<td class="results right">
+											4.50
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor
+										</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/02/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											08:00 AM
+										</td>
+<td class="results left">
+											11:00 AM
+										</td>
+<td class="results right">
+											3.00
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor
+										</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/02/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											12:30 PM
+										</td>
+<td class="results left">
+											01:30 PM
+										</td>
+<td class="results right">
+											1.00
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor
+										</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/04/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											06:30 AM
+										</td>
+<td class="results left">
+											12:00 PM
+										</td>
+<td class="results right">
+											5.50
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor
+										</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/04/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">TCIS-1--$29.25</label><input name="JOB_CLASS_RATE_ID" type="hidden" value="53"/>
+</td>
+<td class="results left">
+											12:30 PM
+										</td>
+<td class="results left">
+											04:00 PM
+										</td>
+<td class="results right">
+											3.50
+										</td>
+<td class="results right">
+											0.00
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="INV_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Structures Supervisor
+										</td>
+</tr>
+</tbody></table>
+</div>
+</td></tr></tbody></table>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="section1Title">
+<colgroup>
+<col width="95%"/>
+<col width="5%"/>
+</colgroup>
+<tbody><tr class="Section1Title">
+<td class="Section1Title">
+<a class="PDTwistieToggle" href="" onclick="javascript:toggle('div_detailTwistieMHLInspLogMileage', 'image_detailTwistieMHLInspLogMileage', 'images/i_opened.gif', 'images/i_closed.gif'); return false;"><img alt="Expand/Collapse" border="0" class="PDTwistieToggle" id="image_detailTwistieMHLInspLogMileage" onmouseout="this.className='PDTwistieToggle'" onmouseover="this.className='PDTwistieToggle PDTwistieToggleHover'" src="images/i_opened.gif"/></a> Mileage
+							</td>
+<td class="Section1Title right">
+</td>
+</tr>
+</tbody></table>
+<div class="PDTwistieBody" id="div_detailTwistieMHLInspLogMileage" style="display:block">
+<table class="body">
+<colgroup>
+<col width="1%"/>
+<col width="5%"/>
+<col width="5%"/>
+<col width="10%"/>
+<col width="16%"/>
+<col width="16%"/>
+<col width="4%"/>
+<col width="4%"/>
+<col width="4%"/>
+<col width="5%"/>
+<col width="5%"/>
+<col width="2%"/>
+<col width="23%"/>
+</colgroup>
+<tbody><tr class="">
+<th class="results left" nowrap=""></th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=LOG_DATE&amp;action=sortListHeader" title="Sort ascending">Date</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=MILEAGE_TYPE&amp;action=sortListHeader" title="Sort ascending">Type</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=VEHICLE_NAME&amp;action=sortListHeader" title="Sort ascending">Vehicle Name</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=ADDRESS_FROM&amp;action=sortListHeader" title="Sort ascending">From</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=ADDRESS_TO&amp;action=sortListHeader" title="Sort ascending">To</a>
+</th>
+<th class="results right" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=SHORTEST_DISTANCE&amp;action=sortListHeader" title="Sort ascending">Shortest<br/>Route</a>
+</th>
+<th class="results right" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=BILLABLE_MILES&amp;action=sortListHeader" title="Sort ascending">Billable<br/>Miles</a>
+</th>
+<th class="results right" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=CALCULATED_MILES&amp;action=sortListHeader" title="Sort ascending">Calculated<br/>Miles</a>
+</th>
+<th class="results center" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=ODOMETER_START&amp;action=sortListHeader" title="Sort ascending">Odometer<br/>Start</a>
+</th>
+<th class="results center" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=ODOMETER_STOP&amp;action=sortListHeader" title="Sort ascending">Odometer<br/>Stop</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=TOLL_IND&amp;action=sortListHeader" title="Sort ascending">Toll</a>
+</th>
+<th class="results left" nowrap="">
+<a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLmanageInspectorLog.jsp&amp;beanName=DOMHLINSPLOGMILEAGELIST&amp;colName=COMMENT&amp;action=sortListHeader" title="Sort ascending">Comments</a>
+</th>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											10/29/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">OJM</label><input name="MILEAGE_TYPE" type="hidden" value="03"/>
+</td>
+<td class="results left">
+											Doorango
+										</td>
+<td class="results left">
+											Project Field Office
+										</td>
+<td class="results left">
+											Project Site
+										</td>
+<td class="results right">
+											0 mi
+										</td>
+<td class="results right">
+											25 mi
+										</td>
+<td class="results right">
+											25 mi
+										</td>
+<td class="results center">
+											134529
+										</td>
+<td class="results center">
+											134554
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="TOLL_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Multiple trips to jobsite
+										</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											10/30/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">OJM</label><input name="MILEAGE_TYPE" type="hidden" value="03"/>
+</td>
+<td class="results left">
+											Doorango
+										</td>
+<td class="results left">
+											Project Field Office
+										</td>
+<td class="results left">
+											Project Site
+										</td>
+<td class="results right">
+											0 mi
+										</td>
+<td class="results right">
+											20 mi
+										</td>
+<td class="results right">
+											20 mi
+										</td>
+<td class="results center">
+											134596
+										</td>
+<td class="results center">
+											134616
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="TOLL_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Multiple trips to jobsite
+										</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/01/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">OJM</label><input name="MILEAGE_TYPE" type="hidden" value="03"/>
+</td>
+<td class="results left">
+											Doorango
+										</td>
+<td class="results left">
+											Project Field Office
+										</td>
+<td class="results left">
+											Project Site
+										</td>
+<td class="results right">
+											0 mi
+										</td>
+<td class="results right">
+											25 mi
+										</td>
+<td class="results right">
+											25 mi
+										</td>
+<td class="results center">
+											134696
+										</td>
+<td class="results center">
+											134721
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="TOLL_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Multiple trips to jobsite
+										</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/02/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">OJM</label><input name="MILEAGE_TYPE" type="hidden" value="03"/>
+</td>
+<td class="results left">
+											Doorango
+										</td>
+<td class="results left">
+											Project Field Office
+										</td>
+<td class="results left">
+											Project Site
+										</td>
+<td class="results right">
+											0 mi
+										</td>
+<td class="results right">
+											10 mi
+										</td>
+<td class="results right">
+											10 mi
+										</td>
+<td class="results center">
+											134774
+										</td>
+<td class="results center">
+											134784
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="TOLL_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Multiple trips to jobsite
+										</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td></td>
+<td class="results left" nowrap="">
+											11/04/2018
+										</td>
+<td class="results left">
+<label class="PDLabel">OJM</label><input name="MILEAGE_TYPE" type="hidden" value="03"/>
+</td>
+<td class="results left">
+											Truck
+										</td>
+<td class="results left">
+											Project Field Office
+										</td>
+<td class="results left">
+											Project Site
+										</td>
+<td class="results right">
+											0 mi
+										</td>
+<td class="results right">
+											21 mi
+										</td>
+<td class="results right">
+											21 mi
+										</td>
+<td class="results center">
+											177867
+										</td>
+<td class="results center">
+											177888
+										</td>
+<td class="results left">
+<label class="PDLabel">No</label><input name="TOLL_IND" type="hidden" value="N"/>
+</td>
+<td class="results left">
+											Multiple trips to jobsite
+										</td>
+</tr>
+</tbody></table>
+</div>
+</td></tr></tbody></table>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="Section1Title"><tbody><tr class="Section1Title"><td class="Section1Title">Mileage and Hours Workflow</td></tr></tbody></table>
+<table class="results">
+<colgroup>
+<col class="left" width="10%"/>
+<col class="left" width="50%"/>
+<col class="left" width="15%"/>
+<col class="left" width="25*"/>
+</colgroup>
+<tbody><tr class="results">
+<th class="results">Status</th>
+<th class="results">Name</th>
+<th class="results">Disposition</th>
+<th class="results">Date/Time</th>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+							Draft
+						</td>
+<td class="results">
+							John M Vartabedian/PennDOT BP-000090
+							
+						</td>
+<td class="results">
+							Submit
+						</td>
+<td class="results">
+							11/07/2018 03:51:32 PM
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results workflowcomment" colspan="4"></td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+							Consultant Project Manager Review
+						</td>
+<td class="results">
+							Robert Sanders/PennDOT BP-000090
+							
+						</td>
+<td class="results">
+							Approve
+						</td>
+<td class="results">
+							11/08/2018 10:30:08 AM
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results workflowcomment" colspan="4"></td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+							PennDOT Project Manager Review
+						</td>
+<td class="results">
+							Kenneth A Seal/PennDOT
+							
+						</td>
+<td class="results">
+							Approve
+						</td>
+<td class="results">
+							11/09/2018 06:47:23 AM
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results workflowcomment" colspan="4"></td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+<table class="section1">
+<tbody><tr class="section1">
+<td class="section1">
+<table class="section1title">
+<tbody><tr class="section1title">
+<td class="section1title">Audit Information
+						</td>
+</tr>
+</tbody></table>
+<table class="results">
+<colgroup>
+<col class="left" width="*"/>
+<col class="left" width="*"/>
+<col class="left" width="*"/>
+<col class="left" width="*"/>
+</colgroup>
+<tbody><tr class="results">
+<th class="results">Created By</th>
+<th class="results">Created On</th>
+<th class="results">Modified By</th>
+<th class="results">Modified On</th>
+</tr>
+<tr class="pdevenrow">
+<td class="results">John M Vartabedian/PennDOT BP-000090
+						</td>
+<td class="results">11/04/2018 11:32:24 AM
+						</td>
+<td class="results">Kenneth A Seal/PennDOT
+						</td>
+<td class="results">11/09/2018 06:47:23 AM
+						</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</form>
+<table class="footer">
+<colgroup>
+<col nowrap="" width="175px"/>
+<col nowrap="" width="*"/>
+<col nowrap="" width="175px"/>
+</colgroup>
+<tbody><tr class="footer">
+<td class="footer" colspan="3">
+			
+			You are currently logged in as <b>Ralston W. Lawson</b>.
+
+			 If this is incorrect, please
+
+			 
+
+			<a class="footer" href="javascript:doPDButton('href', 'SVCOMLogin?action=logout', &quot;&quot;);" onclick="return checkSelectionConfirmation('false', &quot;&quot;, '');" onmouseout="doPDMouseOut('logon', ''); return true;" onmouseover="doPDMouseOver('logon', 'Return to the ECMS login page...', ''); return true;">login</a>. 
+		
+			
+				<script language="javascript">
+					/**	if ( navigator.appName.indexOf( "Netscape" ) != -1) { //netscape
+							var myDate = new Date();
+							var myTime = myDate.getTime();
+							myDate.setTime(myTime + 30*60*1000);
+							var myHours = myDate.getHours();
+							var myMinutes = myDate.getMinutes();
+							var myDateString;
+							if (myHours &gt; 12) 
+								myHours = myHours - 12;
+							myDateString = myHours + ":"
+							if (myMinutes &lt; 10)
+								myDateString = myDateString + "0";
+							myDateString = myDateString + myMinutes;
+							document.writeln(" Your session will timeout at&amp;nbsp;&lt;b&gt;" + myDateString + "&lt;/b&gt;.");
+						}else{**/
+							document.writeln(" Your session will timeout in&amp;nbsp;&lt;b&gt;&lt;span id=timeoutCnt &gt;30&lt;/span&gt;&lt;/b&gt;&amp;nbsp;minutes.");
+						//}
+				</script> Your session will timeout in <b><span id="timeoutCnt">29</span></b> minutes.
+ 
+				<script language="javascript">
+ 					
+					var sessionCounter = 30;
+				
+					timeoutCounter();
+					
+						setTimeout("validateSessionTimeout()", 120000);
+					
+				
+					function timeoutCounter(doTimeout) { // change in this line CQ: ECMSU00024891
+					//function timeoutCounter()
+						sessionCounter--;
+						if(sessionCounter == 0){
+							//window.navigate("SVCOMLogin?action=timeout");
+							window.location = "SVCOMLogin?action=timeout";
+						}
+						/* if(sessionCounter &lt; 0){ // change in this line CQ: ECMSU00024891 
+							return;
+						} */
+						else if(sessionCounter &lt; 0){ // change in this line CQ: ECMSU00024891 
+							return;
+						}
+						 else if(sessionCounter == 5){ // change in this line CQ: ECMSU00024891 
+						    showTimeoutWarning();					   // change in this line CQ: ECMSU00024891 
+						}  
+						    
+						if (document.layers) {
+							document.layers.timeoutCnt.document.write(sessionCounter);
+							document.layers.timeoutCnt.document.close();
+							
+							/* CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+							document.layers.timeoutCnt2.document.write(sessionCounter);
+                            document.layers.timeoutCnt2.document.close();
+                            document.layers.timeoutCnt3.document.write(sessionCounter);
+                            document.layers.timeoutCnt3.document.close(); 
+                            /* END OF CQ: ECMSU00024891 - ECMS Logout warning functionality*/
+                            
+						}
+						//else if (document.all) {
+							timeoutCnt.innerHTML = sessionCounter;
+							/* CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+						    timeoutCnt2.innerHTML = sessionCounter;
+							timeoutCnt3.innerHTML = sessionCounter; 
+							/* END OF CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+						// }
+						
+						if(doTimeout == undefined || doTimeout == true)
+						{
+						    setTimeout("timeoutCounter()", 60000);
+						} 
+						return;
+					}
+					function validateSessionTimeout() {
+						var req;
+						if (window.ActiveXObject) {
+							req = new ActiveXObject("Microsoft.XMLHTTP");
+						} else {
+							if (window.XMLHttpRequest) {
+								req = new XMLHttpRequest();
+							}
+						}
+						var d = new Date();
+						req.open("GET", "SVCOMMain?action=VALIDATE&amp;"+d.getTime(), true);
+						req.onreadystatechange = function() {};
+						req.send(null);
+						
+						setTimeout("validateSessionTimeout()", 120000);
+						return;
+					}
+						/* CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+					 function showTimeoutWarning()
+					{
+					    var element = document.getElementById('timeoutWarning');
+					    if(element.style.visibility != 'visible')
+					    {
+					        element.style.visibility = 'visible';
+					        
+					        for(var objs = document.getElementsByTagName('object'), i = objs.length; i--;)
+                            {
+                                objs[i].style.visibility = 'hidden';
+                            }
+					    }
+					    document.getElementsByName('timeoutContinue')[0].focus();
+					}
+					function hideTimeoutWarning(resetCounter)
+					{
+					    var element = document.getElementById('timeoutWarning');
+                        if(element.style.visibility != 'hidden')
+                        {
+                            element.style.visibility = 'hidden';
+                            
+                            for(var objs = document.getElementsByTagName('object'), i = objs.length; i--;)
+                            {
+                                objs[i].style.visibility = 'visible';
+                            }
+                        }
+                        
+                        if(resetCounter != undefined &amp;&amp; resetCounter == true)
+                        { 
+                            sessionCounter = 30;
+                            timeoutCounter(false);
+                        }
+					}
+					function checkCloseTimeoutWarning(event)
+					{
+					    var key = event.keyCode ? event.keyCode : event.charCode;
+					    //esc
+					    if(key == 27)
+					    {
+					        hideTimeoutWarning(false);
+					    }
+					} 
+			 	/*END OF CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+					
+				</script>
+</td>
+</tr>
+<tr class="footer">
+<td class="footer" colspan="3">
+<br/><br/>
+</td>
+</tr>
+<tr class="footer">
+<td class="footer left">
+<label onclick="return false;" title="Release 63.0.14">Release: 63.0</label>
+<br/>
+		Session size: 0.1k
+
+		</td>
+<td class="footer">
+<a class="footer" href="http://www.penndot.gov" target="_blank">PennDOT</a>  | 
+			<a class="footer" href="">Home</a>  | 
+			<a class="footer" href="SVCOMSiteMap">Site Map</a>  | 
+			<a class="footer" href="javascript:openHelpWindow()">Help</a>  | 
+			<a class="footer" href="http://www.state.pa.us" target="_blank">Pennsylvania</a>
+<br/>
+			Copyright © 2009 Pennsylvania Department of Transportation. All Rights Reserved.<br/>
+</td>
+<td class="footer">
+<b>
+			Wed Dec 26 14:47:13 EST 2018
+			</b>
+<br/>Official ECMS Date/Time			
+		</td>
+</tr>
+<tr class="footer">
+<td class="footer left" nowrap="">
+			 
+		</td>
+<td class="footer" nowrap="">
+<a class="footer" href="javascript:openStdPopupWindow('http://www.pa.gov/Pages/Privacy-Policy.aspx');">PennDOT Privacy Policy</a>
+</td>
+<td class="footer" nowrap="">
+			 
+		</td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+</div>
+<script type="text/javascript">
+&lt;!-- //
+	bodyOnLoad();
+//--&gt;
+</script>
+<script type="text/javascript">
+&lt;!-- //
+setPageInit("pdform", "pageFocus");
+	function goAddEdit(action) {
+		var assignID = document.getElementsByName("ASSIGNMENT_ID")[0].value;
+		var inspID = document.getElementsByName("INSPECTOR_ID")[0].value;
+		var inspLogID = document.getElementsByName("INSPECTOR_LOG_ID")[0].value;
+
+		var url = "SVMHLLog?action=" + action+ "&amp;ASSIGNMENT_ID=" + assignID + "&amp;INSPECTOR_ID=" + inspID + "&amp;INSPECTOR_LOG_ID=" + inspLogID;
+		window.location = url;
+		return;
+	}
+//--&gt;
+</script>
+</body></html>

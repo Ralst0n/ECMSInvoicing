@@ -1,0 +1,2516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="IBM Software Development Platform" name="GENERATOR"/>
+<meta content="ECMS, PA Department of Transportation, Registration, Doing Business" name="keywords"/>
+<meta content=" Engineering &amp; Construction Management System" name="description"/>
+<link href="css/body.css" rel="stylesheet" type="text/css"/>
+<link href="css/calendar.css" rel="stylesheet" type="text/css"/>
+<link href="css/banner.css" rel="stylesheet" type="text/css"/>
+<link href="css/toolbar.css" rel="stylesheet" type="text/css"/>
+<!-- Here based on the browser, respective css file is loaded. -->
+<!--[if lte IE 9]>
+	<LINK rel="stylesheet" type="text/css" href="css/menu.css">
+<![endif]-->
+<!--[if !IE]> -->
+<link href="css/menu_non_ie.css" rel="stylesheet" type="text/css"/>
+<!-- <![endif]-->
+<script language="JavaScript" src="javascript/common.js"></script>
+<script language="JavaScript" src="javascript/buttonhandler.js"></script>
+<script language="JavaScript" src="javascript/CascadeMenu.js"></script>
+<!--[if lte IE 9]>
+	<script language=JavaScript src="javascript/ECMSCommon.js"></script>
+<![endif]-->
+<!--[if !IE]> -->
+<script language="JavaScript" src="javascript/ECMSCommon_non_ie.js"></script>
+<!-- <![endif]-->
+<script language="JavaScript" src="javascript/validation.js"></script>
+<script language="JavaScript" src="javascript/toolbar.js"></script>
+<title>Mileage and Hours Log Search Results</title>
+</head>
+<body class="Page" id="Bdy" onresize="bodyOnResize();" style="overflow: hidden;">
+<div id="timeoutWarning" onkeypress="checkCloseTimeoutWarning(event);">
+<div>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="Section1Title"><tbody><tr class="Section1Title"><td class="Section1Title">Timeout Warning</td></tr></tbody></table>
+<table class="Section1Body"><tbody><tr class="Section1Body"><td class="Section1Body">
+             
+           <img align="left" border="0" height="35px" src="images/i_warning.gif" width="35px"/>
+<b>  
+				<p style="font-size: 11pt;">	
+				Wed Dec 26 13:24:31 EST 2018
+					 </p>
+</b>
+<p style="font-size: 11pt;"> Your session will timeout in <b><span id="timeoutCnt2">29</span></b> minute(s).  Would you like to stay logged in to the application?</p>
+<p style="font-size: 11pt;"> Select YES within <b><span id="timeoutCnt3">29</span></b> minute(s) to avoid being logged out and transferred to ECMS Home Page.</p>
+<p> </p>
+<p> </p>
+<p style="text-align: center; font-size: 13pt;">
+<button class="PDButton" lang="javascript" name="timeoutContinue" onclick="return checkSelectionConfirmation('true', &quot;&quot;, '') &amp;&amp; doPDButton('script', 'hideTimeoutWarning(true)', &quot;&quot;);" onmouseout="this.className='PDButton'" onmouseover="this.className='PDButton PDButtonHover'" title="">Yes</button>     
+                    <button class="PDButton" lang="javascript" name="timeoutClose" onclick="return checkSelectionConfirmation('true', &quot;&quot;, '') &amp;&amp; doPDButton('script', 'hideTimeoutWarning(false)', &quot;&quot;);" onmouseout="this.className='PDButton'" onmouseover="this.className='PDButton PDButtonHover'" title="">No</button>
+</p>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</div>
+</div>
+<table class="banner">
+<tbody><tr class="banner">
+<td class="penndot">
+<div class="penndotLink"><a class="banner" href="http://www.penndot.gov" target="_blank"><img alt="PennDOT" class="banner" src="images/penndotLogo.jpg"/></a></div>
+</td>
+<td class="ecms">
+			 
+		    <div class="banner">ECMS</div>
+<div class="banner shadow">ECMS</div>
+<div class="bannertext bannertext1">Engineering and Construction</div>
+<div class="bannertext bannertext2">Management System</div>
+<div class="bannerenvironmenttext"></div>
+<div class="home"><a class="banner" href="" title="ECMS Home">home</a></div>
+<div class="sitemap"><a class="banner" href="SVCOMSiteMap" title="ECMS Site Map">site map</a></div>
+<div class="help"><a class="banner" href="javascript:openHelpWindow()" title="ECMS Help">help</a></div>
+</td>
+<td class="pa">
+	    	 
+			
+		    <div class="paLink"><a class="banner" href="http://www.pa.gov" target="_blank"><img alt="PA" class="banner" src="images/paLogo.gif"/></a></div>
+<div class="logout"><a class="banner logout" href="SVCOMLogin?action=logout" title="Logout">logout</a></div>
+<a class="username" href="/ECMS/">
+</a><div class="userName" id="toggle_userGroups" onclick="javascript:toggle('div_userGroups', 'null',  'null',  'null')" onmouseout="this.className='userName'" onmouseover="this.className='userName PDTwistieToggleHover'"><a class="username" href="/ECMS/"></a><a class="userName" href="" onclick="return false;">
+						Ralston W. Lawson
+					</a></div>
+<div class="userGroups" id="div_userGroups" style="display:none">
+						
+							$BMSBP CONSULTANT INSPECTOR 000090<br/>$BMSBP CONSULTANT INSPECTOR<br/>$BMSBP CONSULTANT INSPECTOR SUPERVISOR 000090<br/>$BMSBP CONSULTANT INSPECTOR SUPERVISOR<br/>$ECMSBP CMH LOG APPROVER 000090<br/>$ECMSBP CMH LOG APPROVER<br/>$ECMSBP CONSULTANT CONSTRUCTION MANAGEMENT 000090<br/>$ECMSBP CONSULTANT CONSTRUCTION MANAGEMENT<br/>$ECMSBP CONSULTANT INSPECTOR 000090<br/>$ECMSBP CONSULTANT INSPECTOR<br/>$ECMSBP DATA ENTRY 000090<br/>$ECMSBP DATA ENTRY<br/>$ECMSBP FINANCIAL OFFICER 000090<br/>$ECMSBP FINANCIAL OFFICER<br/>$ECMSBP PROJECT MANAGER 000090<br/>$ECMSBP PROJECT MANAGER<br/>
+</div>
+</td>
+</tr>
+</tbody></table>
+<iframe class="menu" id="menu100_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu100" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=363" id="menuItem100_30" title="My Business Partner Information" type="Window">
+<a class="menuItem" href="" id="menuItem100_30_Link" onclick="return false;">My Info</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=5" id="menuItem100_40" title="Search for a Business Partner" type="Window">
+<a class="menuItem" href="" id="menuItem100_40_Link" onclick="return false;">Search</a>
+</div>
+</div><iframe class="menu" id="menu101_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu101" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=523" id="menuItem101_10" title="View Bonding Agencies" type="Href">
+<a class="menuItem" href="" id="menuItem101_10_Link" onclick="return false;">Bonding Agencies</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=511" id="menuItem101_30" title="View Bonds" type="Href">
+<a class="menuItem" href="" id="menuItem101_30_Link" onclick="return false;">Bonds</a>
+</div>
+</div><iframe class="menu" id="menu102_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu102" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=508" id="menuItem102_20" title="View Bonds" type="Href">
+<a class="menuItem" href="" id="menuItem102_20_Link" onclick="return false;">Bonds</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=524" id="menuItem102_30" title="View Sureties" type="Href">
+<a class="menuItem" href="" id="menuItem102_30_Link" onclick="return false;">Sureties</a>
+</div>
+</div><iframe class="menu" id="menu1_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu1">
+<div class="menuItem" id="menuItem1_10" menu="menu100">
+<a class="menuItem" href="" id="menuItem1_10_Link" onclick="return false;">Business Partner</a>
+<span class="Arrow" id="menuItem1_10_Arrow">&gt;</span> </div>
+<div class="menuItem" id="menuItem1_20" menu="menu101">
+<a class="menuItem" href="" id="menuItem1_20_Link" onclick="return false;">Bonding Agencies</a>
+<span class="Arrow" id="menuItem1_20_Arrow">&gt;</span> </div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=6" id="menuItem1_30" title="View Consultants Portal" type="Href">
+<a class="menuItem" href="" id="menuItem1_30_Link" onclick="return false;">Consultants</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=362" id="menuItem1_40" title="View Contractors Portal" type="Href">
+<a class="menuItem" href="" id="menuItem1_40_Link" onclick="return false;">Contractors</a>
+</div>
+<div class="menuItem" id="menuItem1_50" menu="menu102">
+<a class="menuItem" href="" id="menuItem1_50_Link" onclick="return false;">Sureties</a>
+<span class="Arrow" id="menuItem1_50_Arrow">&gt;</span> </div>
+</div><iframe class="menu" id="menu103_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu103" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=322" id="menuItem103_10" title="View Planned Projects Portal" type="Href">
+<a class="menuItem" href="" id="menuItem103_10_Link" onclick="return false;">Planned Projects</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=14" id="menuItem103_20" title="View Advertisements Portal" type="Href">
+<a class="menuItem" href="" id="menuItem103_20_Link" onclick="return false;">Advertisements</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=15" id="menuItem103_30" title="View Selection Results Portal" type="Href">
+<a class="menuItem" href="" id="menuItem103_30_Link" onclick="return false;">Selection Results</a>
+</div>
+</div><iframe class="menu" id="menu104_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu104" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=505" id="menuItem104_10" title="View Bid Packages Portal" type="Href">
+<a class="menuItem" href="" id="menuItem104_10_Link" onclick="return false;">Bid Packages</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=506" id="menuItem104_20" title="View Bid Results Portal" type="Href">
+<a class="menuItem" href="" id="menuItem104_20_Link" onclick="return false;">Bid Results</a>
+</div>
+</div><iframe class="menu" id="menu2_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu2">
+<div class="menuItem" id="menuItem2_10" menu="menu103">
+<a class="menuItem" href="" id="menuItem2_10_Link" onclick="return false;">Consultants</a>
+<span class="Arrow" id="menuItem2_10_Arrow">&gt;</span> </div>
+<div class="menuItem" id="menuItem2_20" menu="menu104">
+<a class="menuItem" href="" id="menuItem2_20_Link" onclick="return false;">Contractors</a>
+<span class="Arrow" id="menuItem2_20_Arrow">&gt;</span> </div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=19" id="menuItem2_30" title="View Forum Portal" type="Href">
+<a class="menuItem" href="" id="menuItem2_30_Link" onclick="return false;">Forum</a>
+</div>
+</div><iframe class="menu" id="menu3_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu3">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=21" id="menuItem3_10" title="View Agreements Portal" type="Href">
+<a class="menuItem" href="" id="menuItem3_10_Link" onclick="return false;">Agreements</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=41" id="menuItem3_20" title="View Invoices Portal" type="Href">
+<a class="menuItem" href="" id="menuItem3_20_Link" onclick="return false;">Invoices</a>
+</div>
+</div><iframe class="menu" id="menu105_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu105" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=512" id="menuItem105_10" title="View Asphalt/Diesel Prices" type="Href">
+<a class="menuItem" href="" id="menuItem105_10_Link" onclick="return false;">Asphalt-Diesel Prices</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=513" id="menuItem105_20" title="View Item Price History Portal" type="Href">
+<a class="menuItem" href="" id="menuItem105_20_Link" onclick="return false;">Item Price History</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=504" id="menuItem105_30" title="View Master Items Portal" type="Href">
+<a class="menuItem" href="" id="menuItem105_30_Link" onclick="return false;">Master Items</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=481" id="menuItem105_40" title="View Special Provision Portal" type="Href">
+<a class="menuItem" href="" id="menuItem105_40_Link" onclick="return false;">Special Provisions</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=561" id="menuItem105_50" title="View Steel Prices" type="Href">
+<a class="menuItem" href="" id="menuItem105_50_Link" onclick="return false;">Steel Prices</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=541" id="menuItem105_60" title="Work Class Codes" type="Href">
+<a class="menuItem" href="" id="menuItem105_60_Link" onclick="return false;">Work Class Codes</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=201" id="menuItem105_70" title="Import Equipments" type="Href">
+<a class="menuItem" href="" id="menuItem105_70_Link" onclick="return false;">Equipment Inventory</a>
+</div>
+</div><iframe class="menu" id="menu4_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu4">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=461" id="menuItem4_10" title="View Projects Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_10_Link" onclick="return false;">Projects</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=502" id="menuItem4_20" title="View Estimates Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_20_Link" onclick="return false;">Estimates</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=503" id="menuItem4_30" title="View Work Orders Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_30_Link" onclick="return false;">Work Orders</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=801" id="menuItem4_40" title="View Project Site Activites Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_40_Link" onclick="return false;">Site Activities</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=181" id="menuItem4_50" title="View Source of Supply Portal" type="Href">
+<a class="menuItem" href="" id="menuItem4_50_Link" onclick="return false;">Source of Supply</a>
+</div>
+<div class="menuItem" id="menuItem4_100" menu="menu105">
+<a class="menuItem" href="" id="menuItem4_100_Link" onclick="return false;">Resources</a>
+<span class="Arrow" id="menuItem4_100_Arrow">&gt;</span> </div>
+</div><iframe class="menu" id="menu106_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu106" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=32" id="menuItem106_10" title="AASHTO" type="Window">
+<a class="menuItem" href="" id="menuItem106_10_Link" onclick="return false;">AASHTO</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=141" id="menuItem106_11" title="PROJECT COLLABORATION CENTER (PPCC)" type="Window">
+<a class="menuItem" href="" id="menuItem106_11_Link" onclick="return false;">PROJECT COLLABORATION CENTER (PPCC)</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=34" id="menuItem106_20" title="Highway Engineering Exchange Program (HEEP)" type="Window">
+<a class="menuItem" href="" id="menuItem106_20_Link" onclick="return false;">Highway Engineering Exchange Program (HEEP)</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=35" id="menuItem106_30" title="Other DOTs" type="Window">
+<a class="menuItem" href="" id="menuItem106_30_Link" onclick="return false;">Other DOTs</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=441" id="menuItem106_40" title="PA Unified Certification Program" type="Window">
+<a class="menuItem" href="" id="menuItem106_40_Link" onclick="return false;">PA Unified Certification Program (UCP)</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=563" id="menuItem106_50" title="View PennDOT DBE Map" type="Window">
+<a class="menuItem" href="" id="menuItem106_50_Link" onclick="return false;">PennDOT DBE Map</a>
+</div>
+</div><iframe class="menu" id="menu107_frame" src="javascript:false;"></iframe>
+<div class="menu" id="menu107" style="visibility: hidden;">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=581" id="menuItem107_10" title="Construction Forms" type="Window">
+<a class="menuItem" href="" id="menuItem107_10_Link" onclick="return false;">Construction Forms</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=4" id="menuItem107_15" title="Partial list of Construction Related E - Pubs" type="Window">
+<a class="menuItem" href="" id="menuItem107_15_Link" onclick="return false;">Construction Related E - Pubs</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=582" id="menuItem107_20" title="Highway Related" type="Window">
+<a class="menuItem" href="" id="menuItem107_20_Link" onclick="return false;">Highway Related</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=81" id="menuItem107_30" title="Forms &amp; Publications" type="Window">
+<a class="menuItem" href="" id="menuItem107_30_Link" onclick="return false;">Forms &amp; Publications</a>
+</div>
+</div><iframe class="menu" id="menu5_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu5">
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=721" id="menuItem5_5" title="Bulletins" type="Href">
+<a class="menuItem" href="" id="menuItem5_5_Link" onclick="return false;">Bulletins</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=161" id="menuItem5_15" title="CMH Log Q &amp;A" type="Href">
+<a class="menuItem" href="" id="menuItem5_15_Link" onclick="return false;">CMH Log Q &amp;A</a>
+</div>
+<div class="menuItem" id="menuItem5_30" menu="menu106">
+<a class="menuItem" href="" id="menuItem5_30_Link" onclick="return false;">External Links</a>
+<span class="Arrow" id="menuItem5_30_Arrow">&gt;</span> </div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=268" id="menuItem5_40" title="View File Cabinet" type="Href">
+<a class="menuItem" href="" id="menuItem5_40_Link" onclick="return false;">File Cabinet</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=52" id="menuItem5_50" title="PennDOT Systems" type="Window">
+<a class="menuItem" href="" id="menuItem5_50_Link" onclick="return false;">PennDOT Systems</a>
+</div>
+<div class="menuItem" id="menuItem5_60" menu="menu107">
+<a class="menuItem" href="" id="menuItem5_60_Link" onclick="return false;">Publications</a>
+<span class="Arrow" id="menuItem5_60_Arrow">&gt;</span> </div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=121" id="menuItem5_65" title="Reimbursement Agreement System" type="Window">
+<a class="menuItem" href="" id="menuItem5_65_Link" onclick="return false;">Reimbursement Agreements</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=621" id="menuItem5_80" title="Strike-off Letters" type="Href">
+<a class="menuItem" href="" id="menuItem5_80_Link" onclick="return false;">Strike-off Letters</a>
+</div>
+<div class="menuItem" cmd="SVCOMMain?action=showMenuItem&amp;menuId=661" id="menuItem5_90" title="Training Calendar" type="Window">
+<a class="menuItem" href="" id="menuItem5_90_Link" onclick="return false;">Training Calendar</a>
+</div>
+</div><iframe class="menu" id="menu6_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="menu" id="menu6">
+</div><div class="menuSize" id="menuSize">
+<div class="menuBar" id="menuBar">
+<div class="Bar" id="Bar1" menu="menu1">
+<a class="Bar" href="" id="Bar1_Link" onclick="return false;">Business Partner</a>
+</div>
+<div class="Bar" id="Bar2" menu="menu2">
+<a class="Bar" href="" id="Bar2_Link" onclick="return false;">Solicitation</a>
+</div>
+<div class="Bar" id="Bar3" menu="menu3">
+<a class="Bar" href="" id="Bar3_Link" onclick="return false;">Engineering Agreements</a>
+</div>
+<div class="Bar" id="Bar4" menu="menu4">
+<a class="Bar" href="" id="Bar4_Link" onclick="return false;">Construction Projects</a>
+</div>
+<div class="Bar" id="Bar5" menu="menu5">
+<a class="Bar" href="" id="Bar5_Link" onclick="return false;">References</a>
+</div>
+<div class="Bar" cmd="SVCOMMain?action=showMenuItem&amp;menuId=341" id="Bar6" menu="menu6" title="Work Queue" type="Href">
+<a class="Bar" href="" id="Bar6_Link" onclick="return false;"><img align="absmiddle" height="16" src="images/i_work_queue.gif"/> Work Queue</a>
+</div>
+</div>
+</div>
+<iframe class="button" id="button1_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="button" id="button1" style="visibility: hidden;">
+<div class="buttonItem" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=2","")' id="buttonItem1_2" onbefore='checkSelectionConfirmation("","","")' title="Return to Mileage and Hours Log Portal">
+<a class="buttonItem" href="" id="buttonItem1_2_Link" onclick="return false;">Mileage and Hours Log Portal</a>
+</div>
+</div><iframe class="button" id="button4_frame" src="javascript:false;" style="visibility: hidden;"></iframe>
+<div class="button" id="button4" style="visibility: hidden;">
+<div class="buttonItem" cmd="javascript:doPDButton(&quot;script&quot;,&quot;openScreenHelpWindow('WEB-INF/jsp/MHLresultInspLogs.jsp')&quot;,&quot;&quot;)" id="buttonItem4_1" onbefore='checkSelectionConfirmation("","","")' title="View Screen Help">
+<a class="buttonItem" href="" id="buttonItem4_1_Link" onclick="return false;">Screen Help</a>
+</div>
+<div class="buttonItem" cmd="javascript:doPDButton(&quot;script&quot;,&quot;openUserDictionaryWindow('WEB-INF/jsp/MHLresultInspLogs.jsp')&quot;,&quot;&quot;)" id="buttonItem4_2" onbefore='checkSelectionConfirmation("","","")' title="View Application Permissions">
+<a class="buttonItem" href="" id="buttonItem4_2_Link" onclick="return false;">Application Permissions</a>
+</div>
+</div>
+<div class="toolbarBar" id="toolbarBar">
+<div class="toolbarButton" cmd='javascript:doPDButton("href","PDTagServlet?action=pop&amp;value=2","")' dropdownid="Toolbar_Arrow_1" id="buttonBar1" menu="button1" onbefore='checkSelectionConfirmation("","","")' title="Back">
+<a class="toolbarButton" href="" id="buttonBar1_Link" onclick="return false;"><img align="left" border="0" src="images/i_back.gif"/>Back <span class="toolbarArrow" id="Toolbar_Arrow_1"><img class="toolbarArrowImage" height="12" src="images/i_arrow_down.png" width="12"/></span>   </a>
+</div>
+<div class="toolbarButton" cmd='javascript:doPDButton("submit","pdform","")' id="buttonBar2" onbefore="checkSelectionConfirmation(&quot;true&quot;,&quot;setAction('SHOWSEARCH')&quot;,&quot;&quot;)" title="Refine Search">
+<a class="toolbarButton" href="" id="buttonBar2_Link" onclick="return false;"><img align="left" border="0" src="images/i_refine_search.gif"/>Refine Search</a>
+</div>
+<div class="toolbarButton" cmd="javascript:doPDButton(&quot;script&quot;,&quot;openPrinterFriendlyWindow('WEB-INF/jsp/MHLresultInspLogs.jsp')&quot;,&quot;&quot;)" id="buttonBar3" onbefore='checkSelectionConfirmation("","","")' title="Printer Friendly Version">
+<a class="toolbarButton" href="" id="buttonBar3_Link" onclick="return false;"><img align="left" border="0" src="images/i_printer.gif"/></a>
+</div>
+<div class="toolbarButton" dropdownid="Toolbar_Arrow_4" id="buttonBar4" menu="button4" onbefore='checkSelectionConfirmation("","","")' title="Help">
+<a class="toolbarButton" href="" id="buttonBar4_Link" onclick="return false;"><img align="left" border="0" src="images/i_help.gif"/>Help<span class="toolbarArrow" id="Toolbar_Arrow_4"><img class="toolbarArrowImage" height="12" src="images/i_arrow_down.png" width="12"/></span>   </a>
+</div>
+</div>
+<script> InitToolbar(); </script>
+<!-- Include file for displaying current ECMSMessages -->
+<div class="Page" id="dataView" onclick="dataViewOnClick();" style="height: 781px;">
+<!--[if lte IE 9]>
+	<script language=JavaScript src="javascript/calendarControl.js"></script>
+<![endif]-->
+<!--[if !IE]> -->
+<script language="JavaScript" src="javascript/calendarControl_non_ie.js"></script><div id="CalendarControl"></div>
+<!-- <![endif]-->
+<table class="Page"><tbody><tr class="Page"><td class="Page">
+<form action="SVMHLSearch" name="pdform">
+<input name="action" type="hidden"/>
+<table class="Title"><tbody><tr class="Title"><td class="Title">Mileage and Hours Log Search Results</td></tr></tbody></table>
+<table class="Section1"><tbody><tr class="Section1"><td class="Section1">
+<table class="quickfindfilter"><tbody><tr class="quickfindfilter"><td class="quickfindfilter"> <select class="quickfindfilter" id="searchFilterDropdown" size="1">
+<option selected="" value="filter">Filter</option>
+<option value="search">Search</option>
+</select> <select class="quickfindfilter" id="findDropdown" size="1"> <option selected="" value="AGR">Agreement</option>
+<option value="BEGIN_DATE">Begin Date</option>
+<option value="END_DATE">End Date</option>
+<option value="INSPECTOR_NAME_DESC">Inspector</option>
+<option value="LOG_TYPE">Log Type</option>
+<option value="PART_WO_ID">Part/WO</option>
+<option value="ECMS_PROJECT_NUM">Project</option>
+<option value="STATUS_DESC">Status</option>
+</select> <input class="quickfindfilter" id="findValue" onkeypress='return catchKeyPress("quickfindfilterGo");' size="25" type="text" value=""/> <button beanname="DOMHLSEARCHRESULTSLIST" class="PDButton" id="searchList" name="quickfindfilterGo" onclick="performSearch();return false;" onmouseout="this.className='PDButton'" onmouseover="this.className='PDButton PDButtonHover'" pagename="WEB-INF/jsp/MHLresultInspLogs.jsp" title="Search/Filter" value="Go">Go</button></td></tr></tbody></table>
+<table class="paging">
+<tbody><tr class="paging">
+<td class="paging left middle">
+			Records 1 to 67 of 67
+		</td>
+<td class="paging left bottom" width="55">
+<img alt="Go to first page - Not Available" border="0" class="img" height="16" onmouseout="this.className='img'" onmouseover="this.className='img PDButtonHover'" src="images/i_first_page_d.gif" width="16"/> <img alt="Go to previous page - Not Available" border="0" class="img" height="16" onmouseout="this.className='img'" onmouseover="this.className='img PDButtonHover'" src="images/i_prev_page_d.gif" width="16"/>
+</td>
+<td class="paging center middle" nowrap="" width="105">
+			Page 1 of 1
+		</td>
+<td class="paging right bottom" width="55">
+<img alt="Go to next page - Not Available" border="0" class="img" height="16" onmouseout="this.className='img'" onmouseover="this.className='img PDButtonHover'" src="images/i_next_page_d.gif" width="16"/> <img alt="Go to last page - Not Available" border="0" class="img" height="16" onmouseout="this.className='img'" onmouseover="this.className='img PDButtonHover'" src="images/i_last_page_d.gif" width="16"/>
+</td>
+<td class="paging right middle">
+<label class="PDLabel">Records Per Page:</label>  
+<select class="PDDropdown" id="rowsPerPageDropdown" onchange="window.location='PDTagServlet?action=rowsPerPage&amp;nextPage=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;rowsPerPage=' + this.options[this.selectedIndex].value">
+<option value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+<option value="75">75</option>
+<option selected="" value="100">100</option>
+<option value="250">250</option>
+<option value="500">500</option>
+</select>
+</td>
+</tr>
+</tbody></table>
+<table class="results">
+<colgroup>
+<col width="4%"/>
+<col width="3%"/>
+<col width="4%"/>
+<col width="15%"/>
+<col width="4%"/>
+<col width="4%"/>
+<col width="10%"/>
+<col width="*"/>
+</colgroup>
+<tbody><tr class="resultsheader">
+<th class="results" nowrap=""><a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;colName=AGR&amp;action=sortListHeader" title="Sort descending">Agreement</a> <img alt="Sort Descending" border="0" class="PDImage" name="lnkSort" src="images/b_ascendingOrder.gif" style="vspace=5;"/></th>
+<th class="results" nowrap=""><a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;colName=PART_WO_ID&amp;action=sortListHeader" title="Sort ascending">Part/WO</a></th>
+<th class="results" nowrap=""><a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;colName=ECMS_PROJECT_NUM&amp;action=sortListHeader" title="Sort ascending">Project</a></th>
+<th class="results" nowrap=""><a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;colName=INSPECTOR_NAME_DESC&amp;action=sortListHeader" title="Sort ascending">Inspector</a></th>
+<th class="results" nowrap=""><a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;colName=BEGIN_DATE&amp;action=sortListHeader" title="Sort ascending">Begin Date</a></th>
+<th class="results" nowrap=""><a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;colName=END_DATE&amp;action=sortListHeader" title="Sort ascending">End Date</a></th>
+<th class="results" nowrap=""><a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;colName=STATUS_DESC&amp;action=sortListHeader" title="Sort ascending">Status</a></th>
+<th class="results" nowrap=""><a class="resultsheader" href="PDTagServlet?pageName=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;colName=LOG_TYPE&amp;action=sortListHeader" title="Sort ascending">Log Type</a></th>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=79659">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							12/17/2018													
+						</td>
+<td class="results" nowrap="">
+							12/23/2018													
+						</td>
+<td class="results" nowrap="">
+							PennDOT Project Manager Review													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=79658">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							12/10/2018													
+						</td>
+<td class="results" nowrap="">
+							12/16/2018													
+						</td>
+<td class="results" nowrap="">
+							PennDOT Project Manager Review													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=77924">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							12/03/2018													
+						</td>
+<td class="results" nowrap="">
+							12/09/2018													
+						</td>
+<td class="results" nowrap="">
+							Approved													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=77876">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							11/26/2018													
+						</td>
+<td class="results" nowrap="">
+							12/02/2018													
+						</td>
+<td class="results" nowrap="">
+							Approved													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=76063">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							11/19/2018													
+						</td>
+<td class="results" nowrap="">
+							11/25/2018													
+						</td>
+<td class="results" nowrap="">
+							Approved													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=74971">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							11/12/2018													
+						</td>
+<td class="results" nowrap="">
+							11/18/2018													
+						</td>
+<td class="results" nowrap="">
+							Approved													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=73817">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							11/05/2018													
+						</td>
+<td class="results" nowrap="">
+							11/11/2018													
+						</td>
+<td class="results" nowrap="">
+							Approved													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=72875">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/29/2018													
+						</td>
+<td class="results" nowrap="">
+							11/04/2018													
+						</td>
+<td class="results" nowrap="">
+							Approved													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=72251">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/22/2018													
+						</td>
+<td class="results" nowrap="">
+							10/28/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=70126">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/15/2018													
+						</td>
+<td class="results" nowrap="">
+							10/21/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=68892">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/08/2018													
+						</td>
+<td class="results" nowrap="">
+							10/14/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=67541">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/01/2018													
+						</td>
+<td class="results" nowrap="">
+							10/07/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=66262">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							09/24/2018													
+						</td>
+<td class="results" nowrap="">
+							09/30/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=66258">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							09/17/2018													
+						</td>
+<td class="results" nowrap="">
+							09/23/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=63103">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							09/10/2018													
+						</td>
+<td class="results" nowrap="">
+							09/16/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=63102">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							09/03/2018													
+						</td>
+<td class="results" nowrap="">
+							09/09/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=60750">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							08/27/2018													
+						</td>
+<td class="results" nowrap="">
+							09/02/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=60737">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							08/20/2018													
+						</td>
+<td class="results" nowrap="">
+							08/26/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=57818">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							08/13/2018													
+						</td>
+<td class="results" nowrap="">
+							08/19/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=57510">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							08/06/2018													
+						</td>
+<td class="results" nowrap="">
+							08/12/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=55449">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							07/30/2018													
+						</td>
+<td class="results" nowrap="">
+							08/05/2018													
+						</td>
+<td class="results" nowrap="">
+							Processing Invoice													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=53456">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							07/23/2018													
+						</td>
+<td class="results" nowrap="">
+							07/29/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=52376">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							07/16/2018													
+						</td>
+<td class="results" nowrap="">
+							07/22/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=50753">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							07/09/2018													
+						</td>
+<td class="results" nowrap="">
+							07/15/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=49800">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							07/02/2018													
+						</td>
+<td class="results" nowrap="">
+							07/08/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=49607">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							06/25/2018													
+						</td>
+<td class="results" nowrap="">
+							07/01/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=47309">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							06/18/2018													
+						</td>
+<td class="results" nowrap="">
+							06/24/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=47133">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							06/11/2018													
+						</td>
+<td class="results" nowrap="">
+							06/17/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=44517">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							06/04/2018													
+						</td>
+<td class="results" nowrap="">
+							06/10/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=43067">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							05/28/2018													
+						</td>
+<td class="results" nowrap="">
+							06/03/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=41832">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							05/21/2018													
+						</td>
+<td class="results" nowrap="">
+							05/27/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=40323">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							05/14/2018													
+						</td>
+<td class="results" nowrap="">
+							05/20/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=39514">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							05/07/2018													
+						</td>
+<td class="results" nowrap="">
+							05/13/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=38053">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							04/30/2018													
+						</td>
+<td class="results" nowrap="">
+							05/06/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=37284">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							04/23/2018													
+						</td>
+<td class="results" nowrap="">
+							04/29/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=35875">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							04/16/2018													
+						</td>
+<td class="results" nowrap="">
+							04/22/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=34872">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							04/09/2018													
+						</td>
+<td class="results" nowrap="">
+							04/15/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=33836">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							04/02/2018													
+						</td>
+<td class="results" nowrap="">
+							04/08/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=33066">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							03/26/2018													
+						</td>
+<td class="results" nowrap="">
+							04/01/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=32656">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							03/19/2018													
+						</td>
+<td class="results" nowrap="">
+							03/25/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=31738">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							03/12/2018													
+						</td>
+<td class="results" nowrap="">
+							03/18/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=31103">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							03/05/2018													
+						</td>
+<td class="results" nowrap="">
+							03/11/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=30592">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							02/26/2018													
+						</td>
+<td class="results" nowrap="">
+							03/04/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=30022">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							02/19/2018													
+						</td>
+<td class="results" nowrap="">
+							02/25/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=29597">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							02/12/2018													
+						</td>
+<td class="results" nowrap="">
+							02/18/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=29596">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							02/05/2018													
+						</td>
+<td class="results" nowrap="">
+							02/11/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=28643">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							01/29/2018													
+						</td>
+<td class="results" nowrap="">
+							02/04/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=28313">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							01/22/2018													
+						</td>
+<td class="results" nowrap="">
+							01/28/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=27607">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							01/15/2018													
+						</td>
+<td class="results" nowrap="">
+							01/21/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=27094">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							01/08/2018													
+						</td>
+<td class="results" nowrap="">
+							01/14/2018													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=26639">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							12/25/2017													
+						</td>
+<td class="results" nowrap="">
+							12/31/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=25545">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							12/18/2017													
+						</td>
+<td class="results" nowrap="">
+							12/24/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=25351">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							12/11/2017													
+						</td>
+<td class="results" nowrap="">
+							12/17/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=24444">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							12/04/2017													
+						</td>
+<td class="results" nowrap="">
+							12/10/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=24094">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							11/27/2017													
+						</td>
+<td class="results" nowrap="">
+							12/03/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=22495">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							11/20/2017													
+						</td>
+<td class="results" nowrap="">
+							11/26/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=22484">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							11/13/2017													
+						</td>
+<td class="results" nowrap="">
+							11/19/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=21057">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							11/06/2017													
+						</td>
+<td class="results" nowrap="">
+							11/12/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=19960">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/30/2017													
+						</td>
+<td class="results" nowrap="">
+							11/05/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=18788">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/23/2017													
+						</td>
+<td class="results" nowrap="">
+							10/29/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=17931">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/16/2017													
+						</td>
+<td class="results" nowrap="">
+							10/22/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=16540">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/09/2017													
+						</td>
+<td class="results" nowrap="">
+							10/15/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=16511">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							10/02/2017													
+						</td>
+<td class="results" nowrap="">
+							10/08/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=13873">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							09/25/2017													
+						</td>
+<td class="results" nowrap="">
+							10/01/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=13027">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							09/18/2017													
+						</td>
+<td class="results" nowrap="">
+							09/24/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDOddRow" onmouseout='this.className="PDOddRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=10495">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							09/11/2017													
+						</td>
+<td class="results" nowrap="">
+							09/17/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+<tr class="PDEvenRow" onmouseout='this.className="PDEvenRow"' onmouseover='this.className="highlight"'>
+<td class="results" nowrap="">
+<a class="results" href="SVMHLLog?action=SHOWMHLINSPLOG&amp;ASSIGNMENT_ID=673&amp;INSPECTOR_ID=1426&amp;INSPECTOR_LOG_ID=10427">
+								E02430
+							</a>
+</td>
+<td class="results" nowrap="">
+							1													
+						</td>
+<td class="results" nowrap="">
+							64222											
+						</td>
+<td class="results" nowrap="">
+							John M Vartabedian													
+						</td>
+<td class="results" nowrap="">
+							09/04/2017													
+						</td>
+<td class="results" nowrap="">
+							09/10/2017													
+						</td>
+<td class="results" nowrap="">
+							Invoice Processed													
+						</td>
+<td class="results" nowrap="">
+							Regular													
+						</td>
+</tr>
+</tbody></table>
+<button class="PDButton" onclick="window.open('PDDownloadFile?displayedOnly=false','Download'); return false;" onmouseout="this.className='PDButton'" onmouseover="this.className='PDButton PDButtonHover'" title="Mileage and Hours Log Search Results">Export</button>
+<table class="paging">
+<tbody><tr class="paging">
+<td class="paging left middle">
+			Records 1 to 67 of 67
+		</td>
+<td class="paging left bottom" width="55">
+<img alt="Go to first page - Not Available" border="0" class="img" height="16" onmouseout="this.className='img'" onmouseover="this.className='img PDButtonHover'" src="images/i_first_page_d.gif" width="16"/> <img alt="Go to previous page - Not Available" border="0" class="img" height="16" onmouseout="this.className='img'" onmouseover="this.className='img PDButtonHover'" src="images/i_prev_page_d.gif" width="16"/>
+</td>
+<td class="paging center middle" nowrap="" width="105">
+			Page 1 of 1
+		</td>
+<td class="paging right bottom" width="55">
+<img alt="Go to next page - Not Available" border="0" class="img" height="16" onmouseout="this.className='img'" onmouseover="this.className='img PDButtonHover'" src="images/i_next_page_d.gif" width="16"/> <img alt="Go to last page - Not Available" border="0" class="img" height="16" onmouseout="this.className='img'" onmouseover="this.className='img PDButtonHover'" src="images/i_last_page_d.gif" width="16"/>
+</td>
+<td class="paging right middle">
+<label class="PDLabel">Records Per Page:</label>  
+<select class="PDDropdown" id="rowsPerPageDropdown" onchange="window.location='PDTagServlet?action=rowsPerPage&amp;nextPage=WEB-INF/jsp/MHLresultInspLogs.jsp&amp;beanName=DOMHLSEARCHRESULTSLIST&amp;rowsPerPage=' + this.options[this.selectedIndex].value">
+<option value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+<option value="75">75</option>
+<option selected="" value="100">100</option>
+<option value="250">250</option>
+<option value="500">500</option>
+</select>
+</td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+</form>
+<table class="footer">
+<colgroup>
+<col nowrap="" width="175px"/>
+<col nowrap="" width="*"/>
+<col nowrap="" width="175px"/>
+</colgroup>
+<tbody><tr class="footer">
+<td class="footer" colspan="3">
+			
+			You are currently logged in as <b>Ralston W. Lawson</b>.
+
+			 If this is incorrect, please
+
+			 
+
+			<a class="footer" href="javascript:doPDButton('href', 'SVCOMLogin?action=logout', &quot;&quot;);" onclick="return checkSelectionConfirmation('false', &quot;&quot;, '');" onmouseout="doPDMouseOut('logon', ''); return true;" onmouseover="doPDMouseOver('logon', 'Return to the ECMS login page...', ''); return true;">login</a>. 
+		
+			
+				<script language="javascript">
+					/**	if ( navigator.appName.indexOf( "Netscape" ) != -1) { //netscape
+							var myDate = new Date();
+							var myTime = myDate.getTime();
+							myDate.setTime(myTime + 30*60*1000);
+							var myHours = myDate.getHours();
+							var myMinutes = myDate.getMinutes();
+							var myDateString;
+							if (myHours &gt; 12) 
+								myHours = myHours - 12;
+							myDateString = myHours + ":"
+							if (myMinutes &lt; 10)
+								myDateString = myDateString + "0";
+							myDateString = myDateString + myMinutes;
+							document.writeln(" Your session will timeout at&amp;nbsp;&lt;b&gt;" + myDateString + "&lt;/b&gt;.");
+						}else{**/
+							document.writeln(" Your session will timeout in&amp;nbsp;&lt;b&gt;&lt;span id=timeoutCnt &gt;30&lt;/span&gt;&lt;/b&gt;&amp;nbsp;minutes.");
+						//}
+				</script> Your session will timeout in <b><span id="timeoutCnt">29</span></b> minutes.
+ 
+				<script language="javascript">
+ 					
+					var sessionCounter = 30;
+				
+					timeoutCounter();
+					
+						setTimeout("validateSessionTimeout()", 120000);
+					
+				
+					function timeoutCounter(doTimeout) { // change in this line CQ: ECMSU00024891
+					//function timeoutCounter()
+						sessionCounter--;
+						if(sessionCounter == 0){
+							//window.navigate("SVCOMLogin?action=timeout");
+							window.location = "SVCOMLogin?action=timeout";
+						}
+						/* if(sessionCounter &lt; 0){ // change in this line CQ: ECMSU00024891 
+							return;
+						} */
+						else if(sessionCounter &lt; 0){ // change in this line CQ: ECMSU00024891 
+							return;
+						}
+						 else if(sessionCounter == 5){ // change in this line CQ: ECMSU00024891 
+						    showTimeoutWarning();					   // change in this line CQ: ECMSU00024891 
+						}  
+						    
+						if (document.layers) {
+							document.layers.timeoutCnt.document.write(sessionCounter);
+							document.layers.timeoutCnt.document.close();
+							
+							/* CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+							document.layers.timeoutCnt2.document.write(sessionCounter);
+                            document.layers.timeoutCnt2.document.close();
+                            document.layers.timeoutCnt3.document.write(sessionCounter);
+                            document.layers.timeoutCnt3.document.close(); 
+                            /* END OF CQ: ECMSU00024891 - ECMS Logout warning functionality*/
+                            
+						}
+						//else if (document.all) {
+							timeoutCnt.innerHTML = sessionCounter;
+							/* CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+						    timeoutCnt2.innerHTML = sessionCounter;
+							timeoutCnt3.innerHTML = sessionCounter; 
+							/* END OF CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+						// }
+						
+						if(doTimeout == undefined || doTimeout == true)
+						{
+						    setTimeout("timeoutCounter()", 60000);
+						} 
+						return;
+					}
+					function validateSessionTimeout() {
+						var req;
+						if (window.ActiveXObject) {
+							req = new ActiveXObject("Microsoft.XMLHTTP");
+						} else {
+							if (window.XMLHttpRequest) {
+								req = new XMLHttpRequest();
+							}
+						}
+						var d = new Date();
+						req.open("GET", "SVCOMMain?action=VALIDATE&amp;"+d.getTime(), true);
+						req.onreadystatechange = function() {};
+						req.send(null);
+						
+						setTimeout("validateSessionTimeout()", 120000);
+						return;
+					}
+						/* CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+					 function showTimeoutWarning()
+					{
+					    var element = document.getElementById('timeoutWarning');
+					    if(element.style.visibility != 'visible')
+					    {
+					        element.style.visibility = 'visible';
+					        
+					        for(var objs = document.getElementsByTagName('object'), i = objs.length; i--;)
+                            {
+                                objs[i].style.visibility = 'hidden';
+                            }
+					    }
+					    document.getElementsByName('timeoutContinue')[0].focus();
+					}
+					function hideTimeoutWarning(resetCounter)
+					{
+					    var element = document.getElementById('timeoutWarning');
+                        if(element.style.visibility != 'hidden')
+                        {
+                            element.style.visibility = 'hidden';
+                            
+                            for(var objs = document.getElementsByTagName('object'), i = objs.length; i--;)
+                            {
+                                objs[i].style.visibility = 'visible';
+                            }
+                        }
+                        
+                        if(resetCounter != undefined &amp;&amp; resetCounter == true)
+                        { 
+                            sessionCounter = 30;
+                            timeoutCounter(false);
+                        }
+					}
+					function checkCloseTimeoutWarning(event)
+					{
+					    var key = event.keyCode ? event.keyCode : event.charCode;
+					    //esc
+					    if(key == 27)
+					    {
+					        hideTimeoutWarning(false);
+					    }
+					} 
+			 	/*END OF CQ: ECMSU00024891 - ECMS Logout warning functionality*/ 
+					
+				</script>
+</td>
+</tr>
+<tr class="footer">
+<td class="footer" colspan="3">
+<br/><br/>
+</td>
+</tr>
+<tr class="footer">
+<td class="footer left">
+<label onclick="return false;" title="Release 63.0.14">Release: 63.0</label>
+<br/>
+		Session size: 0.1k
+
+		</td>
+<td class="footer">
+<a class="footer" href="http://www.penndot.gov" target="_blank">PennDOT</a>  | 
+			<a class="footer" href="">Home</a>  | 
+			<a class="footer" href="SVCOMSiteMap">Site Map</a>  | 
+			<a class="footer" href="javascript:openHelpWindow()">Help</a>  | 
+			<a class="footer" href="http://www.state.pa.us" target="_blank">Pennsylvania</a>
+<br/>
+			Copyright © 2009 Pennsylvania Department of Transportation. All Rights Reserved.<br/>
+</td>
+<td class="footer">
+<b>
+			Wed Dec 26 13:24:31 EST 2018
+			</b>
+<br/>Official ECMS Date/Time			
+		</td>
+</tr>
+<tr class="footer">
+<td class="footer left" nowrap="">
+			 
+		</td>
+<td class="footer" nowrap="">
+<a class="footer" href="javascript:openStdPopupWindow('http://www.pa.gov/Pages/Privacy-Policy.aspx');">PennDOT Privacy Policy</a>
+</td>
+<td class="footer" nowrap="">
+			 
+		</td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+</div>
+<script type="text/javascript">
+&lt;!-- //
+	bodyOnLoad();
+//--&gt;
+</script>
+<script type="text/javascript">
+&lt;!-- //
+setPageInit("pdform", "pageFocus"); 
+//--&gt;
+</script>
+</body></html>
